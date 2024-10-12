@@ -10,6 +10,10 @@ title: Effektive Code-Versionierung mit Feature-Branches
 
 #### Best Practices und Strategien
 
+<!-- Icebreaker:
+„Als ich das Programm der Konferenz durchgeschaut und meinen Vortrag am letzten Tag, kurz bevor für manche die Heimreise beginnt, entdeckt habe, dachte ich mir im ersten Moment: Super… 😅
+Aber keine Sorge – obwohl das Thema eher theoretisch klingt, habe ich die wichtigsten Bausteine meiner Meinung nach herausgepickt. Mit ein paar anschaulichen Erklärungen und Tipps versuche ich, das doch etwas trockene Thema lebendig und interessant zu gestalten. -->
+
 ---
 growSeed: 1
 layout: two-cols
@@ -25,13 +29,12 @@ layoutClass: flex items-center
 
 # Jan Friebe
 
-- 32 Jahre alt
-- komme aus NRW 
+- 32 Jahre alt, aus NRW
+- 8+ Jahre Erfahrung in der IT-Welt
 - Team Lead & Lead Angular developer @Eviden
-- Full Stack Entwickler mit Schwerpunkt Frontend 
+- Full Stack Entwickler, Schwerpunkt Frontend 
 - JS/TS // Vue // React // Angular // CSS // Design
-- CrossFitter
-
+- CrossFitter/Hobby Boxer/Runner
 
 <div my-10 flex items-center justify-center>
   <div i-ri-user-3-line op50 ma text-xl />
@@ -71,6 +74,12 @@ layout: cover
 
 ### Wir versionieren Code, um Änderungen nachverfolgen zu können, die Zusammenarbeit (im Team) zu erleichtern und stabile Entwicklungsprozesse mit klaren Release-Zyklen zu gewährleisten.
 
+<!--
+Ein kurzer Satz zum Verständnis warum wir überhaupt unseren Code versionieren...
+Vorlesen!
+Jetzt stellt sich die Frage...click
+-->
+
 ---
 layout: cover
 ---
@@ -79,7 +88,7 @@ layout: cover
 <span v-click v-mark.lime.op90 inline-block p3>Mit der richtigen Strategie!</span>
 
 <v-click at="+2">
-  <span  class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">Github Flow</span>
+  <span class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">Github Flow</span>
   <span class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">Git Flow</span>
 </v-click>
 
@@ -92,6 +101,10 @@ layout: cover
 <div v-click>
 <div text-yellow2 italic>Versteht mich nicht falsch, es ist völlig in Ordnung, mit einem Zweig zu arbeiten, wenn du alleine arbeitest. Sobald du aber im Team arbeitest, reicht die Strategie meist nicht mehr aus</div>
 </div>
+
+<!--
+Zur vollständigkeithalber und zum Verständis möchte ich euch einmal die trunk based Strategie vorstellen.
+-->
 
 ---
 layout: cover
@@ -106,6 +119,27 @@ layout: cover
 <ri-close-fill class="text-red-600 text-xl" /> Kein sauberer Release-Prozess<br>
 
 <span v-click v-mark.lime inline-block p3 mx--2>Wir büßen erheblich an Flexibilität ein!</span>
+
+<!--
+**Fehlende Isolation von Features:**
+- Ein Branch, 
+- keine klare Trennung zwischen neuen Features
+- Unfertige oder unstabiler Code kann in den Hauptcode gelangen
+
+**Schwierige Fehlerbehebung/Lokalisierung:**
+- Schwer nachzuvollziehen durch Code-Vermischung woher das Problem kommt
+
+**Erhöhtes Konfliktrisiko:**
+- hohe Wahrscheinlichkeit für Merge-Konflikte. 
+- Besonders wenn mehrere Personen parallel an unterschiedlichen Teilen des Codes arbeiten 
+
+**Keine parallele Entwicklung:**
+- gleichzeitig zu entwickeln und zu testen ist schwer. 
+- Entwickler müssen abwarten, bis andere ihre Änderungen abgeschlossen haben, was den Entwicklungsprozess verlangsamt.
+
+**Kein sauberer Release-Prozess:**
+- Unfertige oder nicht getestete Features können möglicherweise zusammen mit stabilen in die Produktion gehen, was das Risiko von Fehlern im Live-System erhöht.
+-->
 
 ---
 layout: cover
@@ -127,6 +161,35 @@ layout: cover
 <ri-check-fill class="text-green-600 text-xl" /> Kollaboration / Zusammenarbeit<br>
 <ri-check-fill class="text-green-600 text-xl" /> Bessere Rückverfolgbarkeit/Transparenz<br>
 
+<!--
+**Isolation von Änderungen:**
+- Änderungen können unabhängig voneinander getestet und integriert werden ohne andere Teile des Projekts zu beeinflussen.
+
+**Parallele Entwicklung:**
+- Gleichzeitiges entwickeln von Features ohne sich gegenseitig zu blockieren
+- Steigerung der Effizientez und Flexibilität
+
+**Saubere Versionskontrolle:**
+- Jede Änderung wird nachvollziehbar und übersichtlich festgehalten 
+
+**Konfliktvermeidung:**
+- Risiko von Merge-Konflikten geringer. 
+- Jeder Branch ist für sich isoliert, und mögliche Konflikte werden frühzeitig und kontrolliert beim Zusammenführen der Branches erkannt.
+
+**Bug Fixing:**
+- Bugs können in separaten Bugfix-Branches behoben werden, ohne andere Arbeiten zu stören.
+- Nach der Fehlerbehebung lässt sich der Bugfix gezielt in die Produktivversion integrieren, während die Entwicklung ungestört weitergeht.
+
+**Kollaboration / Zusammenarbeit:**
+- fördert die Zusammenarbeit im Team. Entwickler können Pull-Requests erstellen, wodurch der Code von anderen Teammitgliedern überprüft werden kann. 
+- Man kann andere Teammitglieder leichter um Hilfe bitten
+- Verbesserung der Code-Qualität und Stärkung des Teamgefühls.
+
+**Bessere Rückverfolgbarkeit/Transparenz:**
+-Änderungen werden dokumentiert und lassen sich zurückverfolgen. 
+- Teams können jederzeit nachvollziehen, welche Änderungen wann und von wem vorgenommen wurden, was zu besserer Transparenz und Kommunikation führt.
+-->
+
 ---
 layout: cover
 ---
@@ -136,7 +199,7 @@ layout: cover
 <ul>
   <li class="fadeIn"><strong>Feature Branch</strong>: Für neue Funktionen, z.B. <code>login-page</code></li>
   <li class="fadeIn" style="animation-delay: 1s;"><strong>Bugfix Branch</strong>: Für die Behebung von Fehlern, z.B. <code>fix-login-bug</code></li>
-  <li class="fadeIn" style="animation-delay: 2s;"><strong>Hotfix Branch</strong>: Dringende Korrekturen in der Produktion, z.B. <code>hotfix/security-patch</code></li>
+  <li class="fadeIn" style="animation-delay: 2s;"><strong>Hotfix Branch</strong>: Dringende Korrekturen in der Produktion, z.B. <code>security-patch</code></li>
   <li class="fadeIn" style="animation-delay: 3s;"><strong>Refactoring Branch</strong>: Um Code zu verbessern, z.B. <code>user-authentication</code></li>
   <li class="fadeIn" style="animation-delay: 4s;"><strong>Documentation Branch</strong>: Für Änderungen an der Dokumentation, z.B. <code>update-api-docs</code></li>
   <li class="fadeIn" style="animation-delay: 5s;"><strong>Release Branch</strong>: Um eine Version vorzubereiten, z.B. <code>v1.0.0</code></li>
@@ -160,6 +223,21 @@ layout: cover
 layout: cover
 ---
 
+## Was für Änderungen enthält der branch ?
+<ul>
+  <li><code>branch123</code></li>
+</ul>
+
+<span v-click delay200="1" origin-top-left rotate-12 i-emojione-monotone:thumbs-down w-5em h-5em absolute top-25 right-25></span>
+
+
+<!-- Richtig, er ist unklar definiert und erschwert es uns auf den ersten Blick zu erkennen was sein Zweck ist
+Da wir nicht alle perfekt sind und es manchmal vorkommen das wir einen schlechten Namen wählen, empfehle ich...click -->
+
+---
+layout: cover
+---
+
 ## Kategorisiere deine branches
 
 <span class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">features</span>
@@ -171,22 +249,23 @@ layout: cover
 <span class="bg-gray-100 text-orange-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">docs</span>
 <span class="bg-gray-100 text-violet-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">config</span>
 
-<span  v-mark.lime inline-block p3 mx--2>Kategorisierung verhilt zu mehr Struktur und Effizienz im Entwicklungsprozess</span>
+<span v-mark.lime inline-block p3 mx--2>Kategorisierung verhilt zu mehr Struktur und Effizienz im Entwicklungsprozess</span>
 
 <span v-click delay200="1" origin-top-left rotate-12 i-emojione-monotone:thinking-face w-5em h-5em absolute top-25 right-25></span>
 
 <!--
-Bessere Übersicht: Branches sind sofort anhand ihres Namens erkennbar. Teammitglieder sehen direkt, woran gearbeitet wird (neue Features, Bugfixes, Refactorings etc.).
+**Bessere Übersicht:**
+- sind sofort anhand ihres Namens erkennbar.
 
-Klare Trennung der Aufgaben: Branches werden nach Art der Arbeit klar voneinander getrennt. So vermeidet man Verwirrung oder Konflikte bei parallelen Entwicklungen.
+** Klare Trennung der Aufgaben:**
+- Branches werden nach Art der Arbeit klar voneinander getrennt
+- Verringerung der Verwirrung oder Konflikte bei der Entwicklung
 
-Effiziente Zusammenarbeit: Es wird einfacher, im Team zu arbeiten. Wenn jeder seine Branches nach einer einheitlichen Konvention benennt, können sich alle besser orientieren und Konflikte im Code minimieren.
+**Automatisierte Prozesse:**
+- Viele CI/CD-Tools können basierend auf Branch-Namen automatisierte Prozesse wie Tests oder Deployments ausführen, z.B. für release/-Branches.
 
-Automatisierte Prozesse: Viele CI/CD-Tools können basierend auf Branch-Namen automatisierte Prozesse wie Tests oder Deployments ausführen, z.B. für release/-Branches.
-
-Nachvollziehbarkeit: Im Projektverlauf kann man rückblickend besser verstehen, welche Branches für welche Aufgaben genutzt wurden, was die Wartung erleichtert.
-
-Vermeidung von Namenskollisionen: Kategorisierte Branches verhindern, dass verschiedene Teammitglieder versehentlich Branches mit ähnlichen Namen erstellen.
+**Vermeidung von Namenskollisionen:**
+- Kategorisierte Branches verhindern, dass verschiedene Teammitglieder versehentlich Branches mit ähnlichen Namen erstellen.
 
 -->
 
@@ -194,7 +273,7 @@ Vermeidung von Namenskollisionen: Kategorisierte Branches verhindern, dass versc
 layout: cover
 ---
 
-# Prefixe deine branches
+# Prefixe deine branches - easy
 
 <ul>
   <li class="fadeIn"><strong>Feature Branch</strong>: Für neue Funktionen, z.B. <code>feature/login-page</code></li>
@@ -218,6 +297,10 @@ layout: cover
 <div v-click>
  Ein Verfahren, bei dem Code-Änderungen über Pull-Requests zur Überprüfung vorgelegt werden, bevor sie in den Hauptbranch integriert werden. 
 </div>
+
+<!--
+Ein weiterer Baustein der imho eine sehr große Rolle spielt oder spielen sollte.
+-->
 
 ---
 layout: cover
