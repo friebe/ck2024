@@ -12,7 +12,7 @@ title: Effektive Code-Versionierung mit Feature-Branches
 
 <!-- Icebreaker:
 „Als ich das Programm der Konferenz durchgeschaut und meinen Vortrag am letzten Tag, kurz bevor für manche die Heimreise beginnt, entdeckt habe, dachte ich mir im ersten Moment: Super… 😅
-Aber keine Sorge – obwohl das Thema eher theoretisch klingt, habe ich die wichtigsten Bausteine meiner Meinung nach herausgepickt. Mit ein paar anschaulichen Erklärungen und Tipps versuche ich, das doch etwas trockene Thema lebendig und interessant zu gestalten. -->
+Aber keine Sorge – obwohl das Thema eher theoretisch klingt, habe ich einige Bausteine herausgepickt. Mit ein paar anschaulichen Erklärungen und Tipps versuche ich, das doch etwas trockene Thema lebendig und interessant zu gestalten. -->
 
 ---
 growSeed: 1
@@ -363,7 +363,24 @@ Implement OAuth2 authentication using Google Sign-In Api
 <span class="bg-gray-100 text-orange-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">core (other changes related to build e.g. maintenance tasks</span></div>
 
 <!--
-Förderung der Struktur und Erleichterung für die Automatisierung 
+Förderung der Struktur und Erleichterung für die Automatisierung -->
+
+---
+layout: cover
+---
+
+# CI/CD in der Branching-Strategie
+
+- Automatisierte Tests in jedem Branch
+- Kontinuierliche Bereitstellung (CD)
+- Pull-Requests und Quality Gates
+- Schnelle Bereitstellungszyklen
+
+<!--
+Automatisierte Tests in jedem Branch: Tests werden automatisch beim Erstellen oder Updaten eines Branches ausgeführt.
+Kontinuierliche Bereitstellung (CD): Erfolgreich getesteter Code wird automatisch in Staging- oder Produktionsumgebungen bereitgestellt.
+Pull-Requests und Quality Gates: Nur getesteter und geprüfter Code wird in den Hauptbranch integriert.
+Schnelle Bereitstellungszyklen: Durch die Automatisierung von Tests und Deployments kann Code häufiger und schneller veröffentlicht werden.
 -->
 
 ---
