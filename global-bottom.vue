@@ -156,18 +156,18 @@ const poly3 = usePloy(3)
       :style="{ 'clip-path': `polygon(${poly1})`, 'opacity': opacity }"
     />
     <div
-      class="clip bg-gradient-to-l from-[#f47c00] to-white/10"
+      class="clip bg-gradient-to-l from-[#0f1c26] to-white/10"
       :style="{ 'clip-path': `polygon(${poly2})`, 'opacity': opacity }"
     />
     <div
-      class="clip bg-gradient-to-t from-[#3b3c42] to-white/10"
+      class="clip bg-gradient-to-t from-[#0f1c26] to-white/10"
       :style="{ 'clip-path': `polygon(${poly3})`, 'opacity': 0.2 }"
     />
   </div>
 
   <footer class="absolute w-30 top-0 right-0 p-2">
     <img
-  class="absolute -bottom-15 -left-10 w-80 opacity-70"
+  class="absolute -bottom-15 -left-10 w-96 opacity-80"
   src="./logo.svg"
   alt="ck2024"
 />

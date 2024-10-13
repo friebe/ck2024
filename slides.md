@@ -60,18 +60,20 @@ layoutClass: flex items-center
 <h3 flex="~ col">
 <div text-2xl origin-top-left transition duration-500 :class="$clicks <= 1 ? 'scale-120' : 'op50'">
   <span v-click>
-    1. Versionierung?<br>
-    2. Einführung in branching Strategien (Vorteile & Nachteile)<br>
+    1. Versionierung<br>
+    2. Einführung in branching Strategien (Vor- und Nachteile)<br>
   </span>
 </div>
 <div leading-10 mt3 forward:delay-300 v-click>
 <h2 mt5 mb4>Tipps und best practises</h2>
-2. Branch Namenskonvention<br>
-3. Effektives Management von PRs<br>
-3. Integration von CI/CD (Linting,Tests)<br>
-3. Das Approval System<br>
-4. Semantische commit Nachrichten<br>
-6. Release Management
+3. Branch Namenskonvention<br>
+4. Das approval System<br>
+5. PR Management<br>
+6. Commit Nachrichten<br>
+7. Nutzung von CI/CD<br>
+8. Release Management<br>
+9. Tooltipps
+
 </div>
 </h3>
 
@@ -234,7 +236,7 @@ Da wir nicht alle perfekt sind und es manchmal vorkommen das wir einen schlechte
 layout: cover
 ---
 
-## Kategorisiere deine branches
+## Branch Kategoriesierung
 
 <span class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">features</span>
 <span class="bg-gray-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">bugfix</span>
@@ -261,7 +263,7 @@ layout: cover
 layout: cover
 ---
 
-# Prefixe deine branches - easy
+# Branch prefix - easy
 
 <ul>
   <li class="fadeIn"><strong>Feature Branch</strong>: Für neue Funktionen, z.B. <code>feature/login-page</code></li>
@@ -361,15 +363,16 @@ Implement OAuth2 authentication using Google Sign-In Api
 - Beispiele erklären
 - Förderung der Struktur und Erleichterung für die Automatisierung 
 - Klick
-- Best practise im OS-Welt
-- es bleibt aber eine Teamrule
+- Best practise in OS-Welt
+- am Ende bleibt alles eine Teamvereinbarung
 -->
 
 ---
 layout: cover
 ---
 
-# CI/CD in der Branching-Strategie
+<h1>CI/CD<span ml-3 text-xl>(kontinuierliche Integration)</span></h1>
+
 
 - Automatisierte Tests in jedem Branch
 - Kontinuierliche Bereitstellung (CD)
@@ -397,14 +400,13 @@ layout: cover
 <ul>
   <li class="fadeIn"><strong>Husky</strong>: Pre-Commit-Hooks, z.B. für einheitliche Commit-Nachrichten</li>
   <li class="fadeIn" style="animation-delay: 1s;"><strong>Lint-Staged</strong>: Lintet nur geänderte Dateien vor einem Commit</li>
-  <li class="fadeIn" style="animation-delay: 2s;"><strong>Git Hooks</strong>: Automatisierte Aktionen wie Formatierung und Tests vor Commit/Push</li>
   <li class="fadeIn" style="animation-delay: 3s;"><strong>CI/CD-Tools</strong> (z.B. Jenkins, GitLab CI, GitHub Actions): Automatisiertes Testen und Build-Prozess</li>
 </ul>
 
 <!-- 
-- Husky prüft vor dem commiten ob Regeln eingehalten werden bezüglich Commit msg. schreiben z.b Ticketnummer
-- git hooks nutzen für Tests für den branch
-- einfaches ci/cd kennen bestimmt einige durch netlify oder vercel von euch?
+- Husky /lint-staged sind tools die vor einem commit auf Regeln prüfen
+- git hooks nutzen für Tests für den branch (für alles)
+- einfaches ci/cd nutzen - kennen bestimmt einige durch netlify oder vercel von euch?
 -->
 
 ---
@@ -413,18 +415,18 @@ layout: cover
 
 <ul>
   <li class="fadeIn" style="animation-delay: 4s;"><strong>Semantic Release</strong>: Automatische Versionierung und Changelog-Erstellung basierend auf Commits</li>
-  <li class="fadeIn" style="animation-delay: 6s;"><strong>Prettier/ESLint</strong>: Einheitliche Code-Formatierung und Qualitätsprüfung</li>
+  <li class="fadeIn" style="animation-delay: 6s;"><strong>Prettier/ESLint/biome/</strong>: Einheitliche Code-Formatierung und Qualitätsprüfung</li>
   <li class="fadeIn" style="animation-delay: 7s;"><strong>Dependabot</strong>: Automatisierte Updates von Abhängigkeiten in Branches</li>
   <li class="fadeIn" style="animation-delay: 8s;"><strong>Branch Naming Conventions Tools</strong> (z.B. Commitizen): Erzwingt konsistente Branch-Namen und Commit-Nachrichten</li>
   <li class="fadeIn" style="animation-delay: 9s;"><strong>Review Tools</strong> (z.B. SonarQube): Automatische Code-Qualitätsanalyse</li>
 </ul>
 
 <!-- 
-- sofern alles sauber ist, changelogs oder sogar release notes automatisch erstellen lassen
+- sofern alles sauber ist, changelogs oder sogar release notes automatisch erstellen lassen cli, npm deps.
 - linten o testausführung in deiner IDE sowie später als github action
-- Nutzen von Qualitätsanalysetools wie SonarQuebe wahlweise sogar als github action automatisch
+- Nutzen von Qualitätsanalysetools wie SonarQube wahlweise sogar als github action automatisch
 
-- **Ihr seht es gibt ein haufen an Möglichkeiten die ihr ausprobieren könnt.**
+- **Ihr seht es gibt einen Haufen an Möglichkeiten, die ihr ausprobieren könnt.**
 - In diesem Sinne macht was draus. ;)
 -->
 
