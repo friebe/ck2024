@@ -45,7 +45,16 @@ layoutClass: flex items-center
   <div><a href="https://twitter.com/jan_friebe" target="_blank" class="border-none! font-300">jan_friebe</a></div>
 </div>
 </template>
+
+<!-- 
+- 32 Jahre alt, aus einem kleinen Dörfchen von NRW
+- seit 2009 in der IT-Welt aktiv
+- Ich arbeite aktuell als Team Lead & Lead developer bei Eviden für ein Produkt der Identitäts und Zugriffsverwaltung
+- Durch meine Position komme ich aktuell nicht mehr so viel zur Programmierung aber ich komme ursprünglich aus der Frontend Ecke
+- Hobbys sind Sport 
+-->
 ---
+
 
 # Fahrplan
 <h3 flex="~ col">
@@ -70,14 +79,13 @@ layoutClass: flex items-center
 layout: cover
 ---
 
-# Versionierung?
+# Versionierung
 
 ### Wir versionieren Code, um Änderungen nachverfolgen zu können, die Zusammenarbeit (im Team) zu erleichtern und stabile Entwicklungsprozesse mit klaren Release-Zyklen zu gewährleisten.
 
 <!--
-Ein kurzer Satz zum Verständnis warum wir überhaupt unseren Code versionieren...
-Vorlesen!
-Jetzt stellt sich die Frage...click
+- Damit wir alle mit dem gleichen Grundverständis starten, ein Satz zur Erklärung
+- Jetzt stellt sich die Frage...click
 -->
 
 ---
@@ -92,6 +100,14 @@ layout: cover
   <span class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">Git Flow</span>
 </v-click>
 
+<!--
+- Wie kann ich denn die Vorteile nutzen, sodass mein Projekt übersichtlicher wird ?
+- Klick
+- Wie oft heißt es hier zwar "it depends", aber im wesentlichen gibt es da zwei Strategien
+- Klick
+- da im Netz viel darüber steht zum nachlesen habe ich heute ein paar rausgepickt
+
+-->
 ---
 layout: cover
 ---
@@ -103,7 +119,10 @@ layout: cover
 </div>
 
 <!--
-Zur vollständigkeithalber und zum Verständis möchte ich euch einmal die trunk based Strategie vorstellen.
+- Zur vollständigkeithalber und zum Verständis möchte ich euch einmal die trunk based Strategie vorstellen.
+- Die wird wahrscheinlich viele kennen
+- Klick
+- Versteht mich nicht falsch, wenn man alleine arbeitet ist das vollkommen ausreichend aber < 1 wird es schwer 
 -->
 
 ---
@@ -121,23 +140,12 @@ layout: cover
 <span v-click v-mark.lime inline-block p3 mx--2>Wir büßen erheblich an Flexibilität ein!</span>
 
 <!--
-**Fehlende Isolation von Features:**
-- Ein Branch, 
 - keine klare Trennung zwischen neuen Features
 - Unfertige oder unstabiler Code kann in den Hauptcode gelangen
-
-**Schwierige Fehlerbehebung/Lokalisierung:**
 - Schwer nachzuvollziehen durch Code-Vermischung woher das Problem kommt
-
-**Erhöhtes Konfliktrisiko:**
-- hohe Wahrscheinlichkeit für Merge-Konflikte. 
-- Besonders wenn mehrere Personen parallel an unterschiedlichen Teilen des Codes arbeiten 
-
-**Keine parallele Entwicklung:**
-- gleichzeitig zu entwickeln und zu testen ist schwer. 
+- hohe Wahrscheinlichkeit für Merge-Konflikte besonders wenn mehrere Personen parallel an unterschiedlichen Teilen des Codes arbeiten 
+- gleichzeitig zu entwickeln und zu testen ist schwer
 - Entwickler müssen abwarten, bis andere ihre Änderungen abgeschlossen haben, was den Entwicklungsprozess verlangsamt.
-
-**Kein sauberer Release-Prozess:**
 - Unfertige oder nicht getestete Features können möglicherweise zusammen mit stabilen in die Produktion gehen, was das Risiko von Fehlern im Live-System erhöht.
 -->
 
@@ -162,31 +170,18 @@ layout: cover
 <ri-check-fill class="text-green-600 text-xl" /> Bessere Rückverfolgbarkeit/Transparenz<br>
 
 <!--
-**Isolation von Änderungen:**
-- Änderungen können unabhängig voneinander getestet und integriert werden ohne andere Teile des Projekts zu beeinflussen.
-
-**Parallele Entwicklung:**
+- Änderungen können unabhängig voneinander getestet und integriert werden
 - Gleichzeitiges entwickeln von Features ohne sich gegenseitig zu blockieren
 - Steigerung der Effizientez und Flexibilität
-
-**Saubere Versionskontrolle:**
 - Jede Änderung wird nachvollziehbar und übersichtlich festgehalten 
-
-**Konfliktvermeidung:**
 - Risiko von Merge-Konflikten geringer. 
 - Jeder Branch ist für sich isoliert, und mögliche Konflikte werden frühzeitig und kontrolliert beim Zusammenführen der Branches erkannt.
-
-**Bug Fixing:**
 - Bugs können in separaten Bugfix-Branches behoben werden, ohne andere Arbeiten zu stören.
 - Nach der Fehlerbehebung lässt sich der Bugfix gezielt in die Produktivversion integrieren, während die Entwicklung ungestört weitergeht.
-
-**Kollaboration / Zusammenarbeit:**
 - fördert die Zusammenarbeit im Team. Entwickler können Pull-Requests erstellen, wodurch der Code von anderen Teammitgliedern überprüft werden kann. 
 - Man kann andere Teammitglieder leichter um Hilfe bitten
 - Verbesserung der Code-Qualität und Stärkung des Teamgefühls.
-
-**Bessere Rückverfolgbarkeit/Transparenz:**
--Änderungen werden dokumentiert und lassen sich zurückverfolgen. 
+- Änderungen werden dokumentiert und lassen sich zurückverfolgen. 
 - Teams können jederzeit nachvollziehen, welche Änderungen wann und von wem vorgenommen wurden, was zu besserer Transparenz und Kommunikation führt.
 -->
 
@@ -231,7 +226,8 @@ layout: cover
 <span v-click delay200="1" origin-top-left rotate-12 i-emojione-monotone:thumbs-down w-5em h-5em absolute top-25 right-25></span>
 
 
-<!-- Richtig, er ist unklar definiert und erschwert es uns auf den ersten Blick zu erkennen was sein Zweck ist
+<!-- 
+- Richtig, er ist unklar definiert und erschwert es uns auf den ersten Blick zu erkennen was sein Zweck ist
 Da wir nicht alle perfekt sind und es manchmal vorkommen das wir einen schlechten Namen wählen, empfehle ich...click -->
 
 ---
@@ -254,18 +250,10 @@ layout: cover
 <span v-click delay200="1" origin-top-left rotate-12 i-emojione-monotone:thinking-face w-5em h-5em absolute top-25 right-25></span>
 
 <!--
-**Bessere Übersicht:**
-- sind sofort anhand ihres Namens erkennbar.
-
-** Klare Trennung der Aufgaben:**
-- Branches werden nach Art der Arbeit klar voneinander getrennt
-- Verringerung der Verwirrung oder Konflikte bei der Entwicklung
-
-**Automatisierte Prozesse:**
-- Viele CI/CD-Tools können basierend auf Branch-Namen automatisierte Prozesse wie Tests oder Deployments ausführen, z.B. für release/-Branches.
-
-**Vermeidung von Namenskollisionen:**
-- Kategorisierte Branches verhindern, dass verschiedene Teammitglieder versehentlich Branches mit ähnlichen Namen erstellen.
+- **Bessere Übersicht:**
+- **Klare Trennung der Aufgaben:**
+- **Automatisierte Prozesse:**
+- **Vermeidung von Namenskollisionen:**
 
 -->
 
@@ -299,7 +287,9 @@ layout: cover
 </div>
 
 <!--
-Ein weiterer Baustein der imho eine sehr große Rolle spielt oder spielen sollte.
+- Ein weiterer Baustein der imho eine sehr große Rolle spielt oder spielen sollte.
+- Klick
+- Eine Strategie um Code Änderungen zu überprüfen Tools helfen dabei mit PRs
 -->
 
 ---
@@ -323,6 +313,11 @@ layout: cover
 2. Kleine, fokussierte Änderungen
 3. Automatisierte Tests und Linting
 4. Konstruktives Feedback geben und annehmen
+
+
+<!-- 
+
+-->
 
 ---
 layout: cover
@@ -363,7 +358,12 @@ Implement OAuth2 authentication using Google Sign-In Api
 <span class="bg-gray-100 text-orange-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">core (other changes related to build e.g. maintenance tasks</span></div>
 
 <!--
-Förderung der Struktur und Erleichterung für die Automatisierung -->
+- Beispiele erklären
+- Förderung der Struktur und Erleichterung für die Automatisierung 
+- Klick
+- Best practise im OS-Welt
+- es bleibt aber eine Teamrule
+-->
 
 ---
 layout: cover
@@ -377,10 +377,10 @@ layout: cover
 - Schnelle Bereitstellungszyklen
 
 <!--
-Automatisierte Tests in jedem Branch: Tests werden automatisch beim Erstellen oder Updaten eines Branches ausgeführt.
-Kontinuierliche Bereitstellung (CD): Erfolgreich getesteter Code wird automatisch in Staging- oder Produktionsumgebungen bereitgestellt.
-Pull-Requests und Quality Gates: Nur getesteter und geprüfter Code wird in den Hauptbranch integriert.
-Schnelle Bereitstellungszyklen: Durch die Automatisierung von Tests und Deployments kann Code häufiger und schneller veröffentlicht werden.
+- Tests werden automatisch beim Erstellen oder Updaten eines Branches ausgeführt.
+- Nur erfolgreich getesteter Code wird automatisch in Staging- oder Produktionsumgebungen bereitgestellt.
+- Das gleiche gilt auch für den mergen von PRs in den Hauptcode
+- Alles ist sauber und getestet und man kann daher öfter update auspielen und ist schneller
 -->
 
 ---
@@ -401,18 +401,32 @@ layout: cover
   <li class="fadeIn" style="animation-delay: 3s;"><strong>CI/CD-Tools</strong> (z.B. Jenkins, GitLab CI, GitHub Actions): Automatisiertes Testen und Build-Prozess</li>
 </ul>
 
+<!-- 
+- Husky prüft vor dem commiten ob Regeln eingehalten werden bezüglich Commit msg. schreiben z.b Ticketnummer
+- git hooks nutzen für Tests für den branch
+- einfaches ci/cd kennen bestimmt einige durch netlify oder vercel von euch?
+-->
+
 ---
 layout: cover
 ---
 
 <ul>
   <li class="fadeIn" style="animation-delay: 4s;"><strong>Semantic Release</strong>: Automatische Versionierung und Changelog-Erstellung basierend auf Commits</li>
-  <li class="fadeIn" style="animation-delay: 5s;"><strong>Branch Protection Rules</strong> (z.B. GitHub, GitLab): Regeln für Branches festlegen (z.B. Reviews, CI-Prüfungen)</li>
   <li class="fadeIn" style="animation-delay: 6s;"><strong>Prettier/ESLint</strong>: Einheitliche Code-Formatierung und Qualitätsprüfung</li>
   <li class="fadeIn" style="animation-delay: 7s;"><strong>Dependabot</strong>: Automatisierte Updates von Abhängigkeiten in Branches</li>
   <li class="fadeIn" style="animation-delay: 8s;"><strong>Branch Naming Conventions Tools</strong> (z.B. Commitizen): Erzwingt konsistente Branch-Namen und Commit-Nachrichten</li>
   <li class="fadeIn" style="animation-delay: 9s;"><strong>Review Tools</strong> (z.B. SonarQube): Automatische Code-Qualitätsanalyse</li>
 </ul>
+
+<!-- 
+- sofern alles sauber ist, changelogs oder sogar release notes automatisch erstellen lassen
+- linten o testausführung in deiner IDE sowie später als github action
+- Nutzen von Qualitätsanalysetools wie SonarQuebe wahlweise sogar als github action automatisch
+
+- **Ihr seht es gibt ein haufen an Möglichkeiten die ihr ausprobieren könnt.**
+- In diesem Sinne macht was draus. ;)
+-->
 
 ---
 layout: end

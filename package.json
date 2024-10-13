@@ -3,8 +3,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "slidev build && slidev --remote",
-    "dev": "slidev --open",
+    "build": "slidev build",
+    "dev": "slidev --open --remote",
     "export": "slidev export"
   },
   "dependencies": {
