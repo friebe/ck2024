@@ -57,25 +57,19 @@ layoutClass: flex items-center
 
 
 # Fahrplan
-<h3 flex="~ col">
-<div text-2xl origin-top-left transition duration-500 :class="$clicks <= 1 ? 'scale-120' : 'op50'">
-  <span v-click>
-    1. Versionierung<br>
-    2. Einführung in branching Strategien (Vor- und Nachteile)<br>
-  </span>
-</div>
-<div leading-10 mt3 forward:delay-300 v-click>
-<h2 mt5 mb4>Tipps und best practises</h2>
-3. Branch Namenskonvention<br>
-4. Das approval System<br>
-5. PR Management<br>
-6. Commit Nachrichten<br>
-7. Nutzung von CI/CD<br>
-8. Release Management<br>
+1. Versionierung
+2. Einführung in branching Strategien (Vor- und Nachteile)
+
+**Tipps und best practises**
+
+3. Branch Namenskonvention
+4. Das approval System
+5. PR Management
+6. Commit Nachrichten
+7. Nutzung von CI/CD
+8. Release Management
 9. Tooltipps
 
-</div>
-</h3>
 
 ---
 layout: cover
@@ -83,7 +77,7 @@ layout: cover
 
 # Versionierung
 
-### Wir versionieren Code, um Änderungen nachverfolgen zu können, die Zusammenarbeit (im Team) zu erleichtern und stabile Entwicklungsprozesse mit klaren Release-Zyklen zu gewährleisten.
+### Wir versionieren Code um Änderungen nachverfolgen zu können, die Zusammenarbeit (im Team) zu erleichtern und stabile Entwicklungsprozesse mit klaren Release-Zyklen zu gewährleisten.
 
 <!--
 - Damit wir alle mit dem gleichen Grundverständis starten, ein Satz zur Erklärung
@@ -105,9 +99,9 @@ layout: cover
 <!--
 - Wie kann ich denn die Vorteile nutzen, sodass mein Projekt übersichtlicher wird ?
 - Klick
-- Wie oft heißt es hier zwar "it depends", aber im wesentlichen gibt es da zwei Strategien
+- Wie oft heißt es hier zwar "it depends", aber im wesentlichen gibt es da zwei Hautstrategien
 - Klick
-- da im Netz viel darüber steht zum nachlesen habe ich heute ein paar rausgepickt
+- da im Netz viel darüber steht habe ich heute ein paar rausgepickt
 
 -->
 ---
@@ -116,6 +110,7 @@ layout: cover
 
 ## Single-Branch-Strategie - Ein branch für alles!
 
+<span delay200="1" origin-top-left rotate-12 i-emojione-monotone:anxious-face-with-sweat w-5em h-5em absolute top-25 right-25></span>
 <div v-click>
 <div text-yellow2 italic>Versteht mich nicht falsch, es ist völlig in Ordnung, mit einem Zweig zu arbeiten, wenn du alleine arbeitest. Sobald du aber im Team arbeitest, reicht die Strategie meist nicht mehr aus</div>
 </div>
