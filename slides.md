@@ -11,8 +11,8 @@ title: Effektive Code-Versionierung mit Feature-Branches
 #### Best Practices und Strategien
 
 <!-- Icebreaker:
-„Als ich das Programm der Konferenz durchgeschaut und meinen Vortrag am letzten Tag, kurz bevor für manche die Heimreise beginnt, entdeckt habe, dachte ich mir im ersten Moment: Super… 😅
-Aber keine Sorge – obwohl das Thema eher theoretisch klingt, habe ich einige Bausteine herausgepickt. Mit ein paar anschaulichen Erklärungen und Tipps versuche ich, das doch etwas trockene Thema lebendig und interessant zu gestalten. -->
+„Als ich das Programm der Konferenz durchgeschaut und meinen Vortrag am letzten Tag, kurz bevor für manche die Heimreise beginnt, entdeckt habe, dachte ich mir im ersten Moment: Na Super… 😅
+Aber keine Sorge – obwohl das Thema eher trocken klingt, habe ich einige Bausteine herausgepickt. Mit ein paar anschaulichen Erklärungen und Tipps versuche ich, das doch etwas trockene Thema lebendig und interessant zu gestalten. -->
 
 ---
 growSeed: 1
@@ -30,11 +30,11 @@ layoutClass: flex items-center
 # Jan Friebe
 
 - 32 Jahre alt, aus NRW
-- 8+ Jahre Erfahrung in der IT-Welt
-- Team Lead & Lead Angular developer @Eviden
+- 9+ Jahre Erfahrung in der IT-Welt
+- Team Lead & Lead Angular developer @ Eviden Germany GmbH
 - Full Stack Entwickler, Schwerpunkt Frontend 
 - JS/TS // Vue // React // Angular // CSS // Design
-- CrossFitter/Hobby Boxer/Runner
+- CrossFitter/Hobby Boxer/Runner/Daddy
 
 <div my-10 flex items-center justify-center>
   <div i-ri-user-3-line op50 ma text-xl />
@@ -47,11 +47,11 @@ layoutClass: flex items-center
 </template>
 
 <!-- 
-- 32 Jahre alt, aus einem kleinen Dörfchen von NRW
+- 32 Jahre alt, aus einem kleinen Dörfchen von NRW nähe Münster
 - seit 2009 in der IT-Welt aktiv
-- Ich arbeite aktuell als Team Lead & Lead developer bei Eviden für ein Produkt der Identitäts und Zugriffsverwaltung
+- Ich arbeite aktuell als Team Lead & Lead developer in 2 bilingualen Teams bei Eviden - ein atos buisness (einer der größten IT Dienstleiter Europas) für ein Produkt der Identitäts und Zugriffsverwaltung
 - Durch meine Position komme ich aktuell nicht mehr so viel zur Programmierung aber ich komme ursprünglich aus der Frontend Ecke
-- Hobbys sind Sport 
+- Hobbys sind Sport und Daddy sein
 -->
 ---
 
@@ -67,9 +67,13 @@ layoutClass: flex items-center
 5. PR Management
 6. Commit Nachrichten
 7. Nutzung von CI/CD
-8. Release Management
-9. Tooltipps
+8. Tooltipps
 
+<!--
+- Zuerst kommt ein bisschen langweilige Theorie, Strategien
+- Anschließend kommt der interessante Teil wo ich ein paar wichtige Bausteine vorstelle die mir in meiner Karriere über den weg gelaufen sind
+
+-->
 
 ---
 layout: cover
@@ -80,8 +84,8 @@ layout: cover
 ### Wir versionieren Code um Änderungen nachverfolgen zu können, die Zusammenarbeit (im Team) zu erleichtern und stabile Entwicklungsprozesse mit klaren Release-Zyklen zu gewährleisten.
 
 <!--
-- Damit wir alle mit dem gleichen Grundverständis starten, ein Satz zur Erklärung
-- Jetzt stellt sich die Frage...click
+- Damit wir alle mit dem gleichen Grundverständis starten, hier ein Satz zur Erklärung
+- Jetzt stellt sich natürlich eine offensichtliche Frage
 -->
 
 ---
@@ -99,9 +103,9 @@ layout: cover
 <!--
 - Wie kann ich denn die Vorteile nutzen, sodass mein Projekt übersichtlicher wird ?
 - Klick
-- Wie oft heißt es hier zwar "it depends", aber im wesentlichen gibt es da zwei Hautstrategien
+- Ja und wie so oft heißt es hier auch "it depends", aber im wesentlichen gibt es da zwei Hautstrategien
 - Klick
-- da im Netz viel darüber steht habe ich heute ein paar rausgepickt
+- da im Netz viel darüber steht habe ich heute ein paar Bausteine rausgepickt anstelle den Inhalt in Gänze wiederzugeben
 
 -->
 ---
@@ -144,6 +148,8 @@ layout: cover
 - gleichzeitig zu entwickeln und zu testen ist schwer
 - Entwickler müssen abwarten, bis andere ihre Änderungen abgeschlossen haben, was den Entwicklungsprozess verlangsamt.
 - Unfertige oder nicht getestete Features können möglicherweise zusammen mit stabilen in die Produktion gehen, was das Risiko von Fehlern im Live-System erhöht.
+
+- Dem gegenüber steht die Strategie
 -->
 
 ---
@@ -225,13 +231,13 @@ layout: cover
 
 <!-- 
 - Richtig, er ist unklar definiert und erschwert es uns auf den ersten Blick zu erkennen was sein Zweck ist
-Da wir nicht alle perfekt sind und es manchmal vorkommen das wir einen schlechten Namen wählen, empfehle ich...click -->
+Da wir nicht alle perfekt sind und es manchmal vorkommt das wir einen schlechten Namen wählen, gibt es da was simples...click -->
 
 ---
 layout: cover
 ---
 
-## Branch Kategoriesierung
+## Branch Kategorisierung
 
 <span class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">features</span>
 <span class="bg-gray-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">bugfix</span>
@@ -280,13 +286,14 @@ layout: cover
 # Das approval System
 
 <div v-click>
- Ein Verfahren, bei dem Code-Änderungen über Pull-Requests zur Überprüfung vorgelegt werden, bevor sie in den Hauptbranch integriert werden. 
+ Ein Verfahren bei dem Code-Änderungen über Pull-Requests zur Überprüfung vorgelegt werden, bevor sie in den Hauptbranch integriert werden. 
 </div>
 
 <!--
 - Ein weiterer Baustein der imho eine sehr große Rolle spielt oder spielen sollte.
 - Klick
 - Eine Strategie um Code Änderungen zu überprüfen Tools helfen dabei mit PRs
+- Hand hoch wer von euch PRs nutzt ?
 -->
 
 ---
@@ -322,7 +329,7 @@ layout: cover
 
 # Semantische Commits
 <div v-click>
-  Commit Nachrichten die nach einem bestimmten Muster verfasst werden, um den Zweck der Code-Änderung eindeutig zu kennzeichnen.
+  Commit Nachrichten die nach einem bestimmten Muster verfasst werden um den Zweck der Code-Änderung eindeutig zu kennzeichnen.
 </div>
 
 ---
@@ -355,7 +362,8 @@ Implement OAuth2 authentication using Google Sign-In Api
 <span class="bg-gray-100 text-orange-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">core (other changes related to build e.g. maintenance tasks</span></div>
 
 <!--
-- Beispiele erklären
+- Ich habe euch hier ein Beispiel mitgebracht...
+
 - Förderung der Struktur und Erleichterung für die Automatisierung 
 - Klick
 - Best practise in OS-Welt
@@ -380,11 +388,6 @@ layout: cover
 - Das gleiche gilt auch für den mergen von PRs in den Hauptcode
 - Alles ist sauber und getestet und man kann daher öfter update auspielen und ist schneller
 -->
-
----
----
-
-# Release Management
 
 ---
 layout: cover
@@ -429,4 +432,4 @@ layout: cover
 layout: end
 ---
 
-## Danke für eure Aufmerksamkeit <ri-heart-fill class="text-orange-500 text-xxl" />
+## Danke für eure Aufmerksamkeit. Fragen? <ri-heart-fill class="text-orange-500 text-xxl" />
