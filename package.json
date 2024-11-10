@@ -5,7 +5,7 @@
   "scripts": {
     "build": "slidev build",
     "dev": "slidev --open --remote",
-    "export": "slidev export"
+    "export": "slidev export --dark"
   },
   "dependencies": {
     "@iconify/json": "^2.2.258",
@@ -14,5 +14,8 @@
     "@slidev/theme-seriph": "latest",
     "seedrandom": "^3.0.5",
     "vue": "^3.5.10"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.48.2"
   }
 }
